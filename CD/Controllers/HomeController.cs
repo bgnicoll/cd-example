@@ -11,8 +11,8 @@ namespace CD.Controllers
     {
         public ActionResult Index()
         {
-            var connectionString = ConfigurationManager.AppSettings["ConnectionString"];
-            return View(connectionString);
+            var connectionString = ConfigurationManager.AppSettings["ConnectionString"].ToString();
+            return View(model: connectionString);
         }
     }
 }
